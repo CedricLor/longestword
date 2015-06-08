@@ -1,0 +1,7 @@
+<h1>Your Result Board</h1>
+<p><%= @result_hash.fetch(:message) %></p>
+<p>Here is your score: <%= @result_hash.fetch(:score) %></p>
+<p>Here is your time: <%= @result_hash.fetch(:time).round(2) %> seconds</p>
+<a href="/game">
+  <button>Play again!</button>
+</a>

@@ -1,0 +1,16 @@
+
+<div>
+  <p>
+    You're grid is: |
+    <% @grid.each do |letter| %>
+      <%= "#{letter} |" %>
+    <% end %>
+  </p>
+  <form action="/score" method="get">
+    <label for="attempt">Try!!!</label>
+    <input type="text" id="attempt" name="user_attempt">
+    <input type="hidden" id="start_time" name="start_time" value="<%= @start_time %>">
+    <input type="hidden" id="grid" name="grid" value="<%= @grid.join %>">
+    <input type="submit" value="Go on!">
+  </form>
+</div>
